@@ -64,6 +64,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# add custome scripts
+alias fi='~/hyprdots/tmux-sessionizer/new.sh'
+
 
 # eval "$(starship init zsh)"
 # export STARSHIP_CONFIG=~/.config/starship.toml
