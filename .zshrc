@@ -62,7 +62,7 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # add custome scripts
-alias fi='~/hyprdots/tmux-sessionizer/new.sh'
+alias fi='~/hyprdots/scripts/tmux-sessionizer/new.sh'
 
 
 # eval "$(starship init zsh)"
