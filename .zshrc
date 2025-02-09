@@ -6,8 +6,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
 ZSH_THEME="spaceship"
 
-
-
 plugins=(
     git
     archlinux
@@ -18,12 +16,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Set-up icons for files/folders in terminal
-alias l= 'eza -l --icons --git -a'
+alias l='eza -l --icons --git -a'
 alias ls='eza --icons'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=2 --icons'
-
-bindkey jj vi-cmd-mode
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
@@ -38,6 +34,7 @@ eval "$(zoxide init zsh)"
 alias cd='z'
 
 # alias 
+alias c='clear'
 alias zed="/usr/bin/zeditor"
 alias task="/home/alex/alex/scripts/mytodo.sh"
 
