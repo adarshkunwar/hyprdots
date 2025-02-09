@@ -69,3 +69,24 @@ alias list='~/hyprdots/scripts/lists/main.sh'
 # eval "$(starship init zsh)"
 # export STARSHIP_CONFIG=~/.config/starship.toml
 #
+
+# Auto-completion for your script in Zsh
+_list_script_completion() {
+    local cur=${words[CURRENT]}
+    local prev=${words[CURRENT-1]}
+    local -a opts lists
+
+    opts=("create" "read" "add" "delete" "lists")
+    lists=($(ls ~/lists 2>/dev/null | sed 's/\.txt$//'))
+
+    case "$prev" in
+        create|delete|read|add)
+            compadd -W "" -a lists
+            ;;
+        *)
+            compadd -W "" -a opts
+            ;;
+    esac
+}
+
+compdef _list_script_completion ~/hyprdots/scripts/lists/main.sh
